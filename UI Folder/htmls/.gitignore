@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+vendor/
+.env
+.venv/
+
+# Build outputs
+dist/
+build/
+*.exe
+*.dll
+
+# IDE/OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*

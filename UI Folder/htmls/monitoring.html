@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WETS — Patient Monitoring</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col text-slate-100">
+  <!-- Top Header -->
+  <header class="bg-gradient-to-r from-blue-800 to-slate-800 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center text-blue-800 font-bold text-sm">W</div>
+        <div>
+          <h1 class="text-lg font-bold">Wireless Emergency Telemedicine System</h1>
+          <p class="text-[10px] text-slate-300 uppercase tracking-wider">Remote Healthcare Monitoring</p>
+        </div>
+      </div>
+      <div class="text-right">
+        <p class="text-xs text-slate-300">We Care</p>
+      </div>
+    </div>
+
+    <!-- Sub Tabs -->
+    <div class="max-w-7xl mx-auto px-4 pb-2 flex flex-wrap gap-1">
+      <button class="px-4 py-1.5 bg-slate-700 text-xs rounded-t text-white font-medium">Vital signs</button>
+      <button class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs rounded-t text-slate-300">Raw Data</button>
+      <button class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs rounded-t text-slate-300">Patient's Notes</button>
+      <button class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs rounded-t text-slate-300">Medical Record</button>
+      <button class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs rounded-t text-slate-300">Personal Info</button>
+      <button class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs rounded-t text-slate-300">Sessions</button>
+      <button class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs rounded-t text-slate-300">Home</button>
+    </div>
+  </header>
+
+  <!-- Toolbar -->
+  <div class="bg-slate-800 border-b border-slate-700 px-4 py-2">
+    <div class="max-w-7xl mx-auto flex flex-wrap gap-2">
+      <button class="text-xs bg-purple-700 hover:bg-purple-600 px-3 py-1 rounded text-white">+ Add consultation</button>
+      <button class="text-xs bg-purple-700 hover:bg-purple-600 px-3 py-1 rounded text-white">+ Add Drug prescription</button>
+      <button class="text-xs bg-purple-700 hover:bg-purple-600 px-3 py-1 rounded text-white">Show personal info.</button>
+      <button class="text-xs bg-purple-700 hover:bg-purple-600 px-3 py-1 rounded text-white">+ Add new patient</button>
+      <button class="text-xs bg-purple-700 hover:bg-purple-600 px-3 py-1 rounded text-white">Patient Search</button>
+    </div>
+  </div>
+
+  <main class="flex-grow p-4 max-w-7xl mx-auto w-full space-y-4">
+    <!-- Patient Info Banner -->
+    <div class="bg-slate-800 rounded-lg p-4 flex flex-col md:flex-row gap-4 items-start md:items-center border border-slate-700">
+      <div class="flex items-center gap-4">
+        <div class="w-16 h-16 bg-slate-600 rounded-lg flex items-center justify-center text-2xl">👤</div>
+        <div class="text-sm space-y-1">
+          <p><span class="text-slate-400">Patient:</span> <span class="font-semibold">Osama Elnahas</span></p>
+          <p><span class="text-slate-400">MRN:</span> 08050852601333</p>
+          <p><span class="text-slate-400">Monitoring start:</span> 15-2-2013</p>
+          <p><span class="text-slate-400">Current state:</span> <span class="text-emerald-400 font-semibold">active</span></p>
+        </div>
+      </div>
+      <div class="md:ml-auto bg-slate-700 rounded-lg p-3 text-xs space-y-1">
+        <p class="text-amber-300 font-semibold">hello DR. osama</p>
+        <p>you have:</p>
+        <p><span class="text-emerald-400 font-bold">100</span> monitored patient</p>
+        <p><span class="text-red-400 font-bold">3</span> emergency event</p>
+        <p><span class="text-blue-400 font-bold">0</span> notification</p>
+      </div>
+    </div>
+
+    <!-- Vital Signs Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center">
+        <p class="text-xs text-slate-400 mb-1">Pulse (bpm)</p>
+        <p class="text-3xl font-bold text-white">60</p>
+        <div class="text-red-500 mt-1">❤</div>
+      </div>
+      <div class="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center">
+        <p class="text-xs text-slate-400 mb-1">Blood Pressure (mmHg)</p>
+        <div class="flex justify-center gap-2 text-2xl font-bold">
+          <span class="text-amber-400">107</span><span class="text-slate-500">/</span><span class="text-red-400">61</span>
+        </div>
+        <p class="text-[10px] text-slate-500 mt-1">DIA / SYS</p>
+      </div>
+      <div class="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center">
+        <p class="text-xs text-slate-400 mb-1">Temperature (°C)</p>
+        <p class="text-3xl font-bold text-amber-400">37.0</p>
+        <p class="text-[10px] text-slate-500 mt-1">🌡</p>
+      </div>
+      <div class="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center">
+        <p class="text-xs text-slate-400 mb-1">SPO2 (%)</p>
+        <p class="text-3xl font-bold text-orange-400">95</p>
+      </div>
+    </div>
+
+    <!-- ECG Section -->
+    <div class="bg-black rounded-lg border border-slate-700 p-4">
+      <h4 class="text-xs text-slate-400 mb-2">ECG Waveform</h4>
+      <div class="w-full h-48 bg-black relative overflow-hidden">
+        <svg class="w-full h-full" preserveAspectRatio="none">
+          <polyline points="0,80 20,80 30,40 40,120 50,20 60,100 70,80 90,80 110,80 120,40 130,120 140,20 150,100 160,80 180,80 200,80 210,40 220,120 230,20 240,100 250,80 270,80 290,80 300,40 310,120 320,20 330,100 340,80 360,80 380,80 390,40 400,120 410,20 420,100 430,80 450,80 470,80 480,40 490,120 500,20 510,100 520,80 540,80 560,80 570,40 580,120 590,20 600,100 610,80 630,80 650,80 660,40 670,120 680,20 690,100 700,80 720,80 740,80 750,40 760,120 770,20 780,100 790,80 810,80 830,80 840,40 850,120 860,20 870,100 880,80" 
+            fill="none" stroke="#4ade80" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="flex flex-wrap gap-2 mt-4 justify-center">
+        <button class="bg-slate-700 hover:bg-slate-600 text-xs px-4 py-1.5 rounded text-white">Load</button>
+        <button class="bg-slate-700 hover:bg-slate-600 text-xs px-4 py-1.5 rounded text-white">Save</button>
+        <button class="bg-amber-600 hover:bg-amber-500 text-xs px-4 py-1.5 rounded text-white">Pause</button>
+        <button class="bg-red-600 hover:bg-red-500 text-xs px-4 py-1.5 rounded text-white">Stop</button>
+        <button class="bg-blue-600 hover:bg-blue-500 text-xs px-4 py-1.5 rounded text-white">UDP</button>
+        <button class="bg-emerald-600 hover:bg-emerald-500 text-xs px-4 py-1.5 rounded text-white">Connect</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-800 text-center text-[10px] text-slate-500 py-2 border-t border-slate-700">
+    Developed in EE Department, Faculty of Engineering, Assiut University
+  </footer>
+</body>
+</html>

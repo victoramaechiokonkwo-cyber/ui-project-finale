@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WETS — Connect to Patient</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-700 to-sky-500 text-white p-4 shadow">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div>
+        <h1 class="text-xl font-bold tracking-wide">Wireless Emergency Telemedicine System</h1>
+        <p class="text-xs opacity-90">Remote Healthcare Monitoring</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 font-bold text-xs">We<br>Care</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow p-6">
+    <div class="max-w-6xl mx-auto space-y-4">
+      <!-- Title -->
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-bold text-red-600">Connect to Patient</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Left: Waveforms -->
+        <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
+          <h3 class="text-sm font-bold text-red-500 mb-4 uppercase tracking-wide">Patient Waveforms</h3>
+          <div class="bg-black rounded-lg p-4 mb-4">
+            <p class="text-xs text-slate-400 mb-2">ECG Waveform</p>
+            <div class="w-full h-48 relative">
+              <svg class="w-full h-full" preserveAspectRatio="none">
+                <polyline points="0,100 15,100 25,60 35,140 45,30 55,120 65,100 85,100 105,100 115,60 125,140 135,30 145,120 155,100 175,100 195,100 205,60 215,140 225,30 235,120 245,100 265,100 285,100 295,60 305,140 315,30 325,120 335,100 355,100 375,100 385,60 395,140 405,30 415,120 425,100 445,100 465,100 475,60 485,140 495,30 505,120 515,100 535,100 555,100 565,60 575,140 585,30 595,120 605,100 625,100 645,100 655,60 665,140 675,30 685,120 695,100 715,100 735,100 745,60 755,140 765,30 775,120 785,100" 
+                  fill="none" stroke="#4ade80" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <button class="bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-medium px-4 py-2 rounded transition">plot</button>
+            <button class="bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-medium px-4 py-2 rounded transition">UDP</button>
+            <button class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-medium px-4 py-2 rounded transition">ON</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white text-xs font-medium px-4 py-2 rounded transition">OFF</button>
+          </div>
+        </div>
+
+        <!-- Right: Vital Signs & Connect -->
+        <div class="space-y-4">
+          <!-- Vital Signs -->
+          <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
+            <h3 class="text-sm font-bold text-red-500 mb-4 uppercase tracking-wide">Vital Signs</h3>
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <div class="text-center border border-slate-200 rounded-lg p-3">
+                <p class="text-[10px] text-slate-500 mb-1">Temperature (°C)</p>
+                <p class="text-2xl font-bold text-slate-800">37.0</p>
+              </div>
+              <div class="text-center border border-slate-200 rounded-lg p-3">
+                <p class="text-[10px] text-slate-500 mb-1">Heart Rate (bpm)</p>
+                <p class="text-2xl font-bold text-slate-800">60</p>
+              </div>
+              <div class="text-center border border-slate-200 rounded-lg p-3">
+                <p class="text-[10px] text-slate-500 mb-1">SPO2(%)</p>
+                <p class="text-2xl font-bold text-slate-800">95</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="text-center border border-slate-200 rounded-lg p-3">
+                <p class="text-[10px] text-slate-500 mb-1">Blood Pressure (mmHg)</p>
+                <p class="text-2xl font-bold text-slate-800">107/61</p>
+              </div>
+              <div class="text-center border border-slate-200 rounded-lg p-3">
+                <p class="text-[10px] text-slate-500 mb-1">Respiration (breath/min)</p>
+                <p class="text-2xl font-bold text-slate-800">12</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connect Panel -->
+          <div class="bg-white rounded-xl shadow-md p-6 border border-slate-200">
+            <h3 class="text-sm font-bold text-red-500 mb-4 uppercase tracking-wide">Connect</h3>
+            <div class="space-y-3">
+              <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+                <label class="text-sm text-slate-600 w-28">Connection Type:</label>
+                <select class="border border-slate-300 rounded-md px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option>patient name</option>
+                  <option>patient ID</option>
+                </select>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded transition">Connect</button>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+                <label class="text-sm text-slate-600 w-28">Name</label>
+                <input type="text" value="osama elnahas" class="border border-slate-300 rounded-md px-3 py-2 text-sm w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+            </div>
+            <div class="flex gap-2 mt-4 justify-end">
+              <button class="bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-medium px-4 py-2 rounded transition">Save</button>
+              <button class="bg-amber-400 hover:bg-amber-500 text-white text-xs font-medium px-4 py-2 rounded transition">Pause</button>
+              <button class="bg-red-500 hover:bg-red-600 text-white text-xs font-medium px-4 py-2 rounded transition">Stop</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 text-center text-xs text-slate-600 py-3">
+    Developed in EE Department, Faculty of Engineering, Assiut University
+  </footer>
+</body>
+</html>
